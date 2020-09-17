@@ -40,15 +40,11 @@ class Song
   end
 
   def self.find_or_create_by_name
-    if self.find_by_name == true
-      false
-    else
-      self.create_by_name
-    end
+    self.find_by_name(name) || self.create_by_name(name)
   end
 
   def self.alphabetical
-
+    @@all.sort_by{ }
   end
 
   def self.new_from_filename
@@ -60,7 +56,7 @@ class Song
   end
 
   def self.destroy_all
-
+    self.all.clear
   end
 
 end
