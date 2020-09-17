@@ -40,7 +40,9 @@ class Song
   end
 
   def find_or_create_by_name
-
+    if self.find_by_name == true
+      self.create_by_name
+    end
   end
 
   def self.alphabetical
