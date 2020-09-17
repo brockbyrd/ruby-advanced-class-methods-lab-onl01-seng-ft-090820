@@ -35,8 +35,8 @@ class Song
       if song.name == name
         return song
       end
-      false
     end
+    false
   end
 
   def find_or_create_by_name
